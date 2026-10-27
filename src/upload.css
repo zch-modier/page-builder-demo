@@ -1,0 +1,112 @@
+/* ---------- 上传区 ---------- */
+
+.uploadHead {
+  margin-bottom: 8px;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 20px;
+  border: 1.5px dashed #d9d9d9;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dropzone:hover,
+.dropzone.isOver {
+  border-color: var(--ant-color-primary, #1677ff);
+  background: var(--ant-color-primary-bg, #e6f4ff);
+}
+
+.dropzoneIcon {
+  margin-bottom: 2px;
+  font-size: 22px;
+  color: var(--ant-color-primary, #1677ff);
+}
+
+/* ---------- 文件卡片 ---------- */
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fileIcon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #8c8c8c;
+  font-size: 18px;
+}
+
+.fileIcon--pdf {
+  background: #fff1f0;
+  color: #cf1322;
+}
+
+.fileMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- 进度 ---------- */
+
+.progressHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.progressFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+/* ---------- 预览弹层 ---------- */
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 24px;
+}
+
+.modalFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.modalFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 100%;
+  background: #f7f8fa;
+  color: #8c8c8c;
+}
+
+.modalFallback p {
+  margin: 0;
+}

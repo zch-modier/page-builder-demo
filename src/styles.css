@@ -1,0 +1,193 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* ---------- 整体骨架 ---------- */
+
+.shell {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.shell > .ant-layout {
+  flex: 1;
+  min-height: 0;
+  background: transparent;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  line-height: normal;
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--ant-color-primary-bg, #e6f4ff);
+  color: var(--ant-color-primary, #1677ff);
+  font-size: 16px;
+}
+
+/* ---------- 左侧组件面板 ---------- */
+
+.panel {
+  padding: 16px;
+  border-left: 1px solid #f0f0f0;
+  overflow: auto;
+}
+
+.panelTitle {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paletteIcon {
+  color: var(--ant-color-primary, #1677ff);
+}
+
+/* ---------- 画布 ---------- */
+
+.canvasArea {
+  padding: 24px;
+  overflow: auto;
+}
+
+.canvasRoot {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.canvasList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.canvasEmpty {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-height: 320px;
+  border: 1.5px dashed #d9d9d9;
+  border-radius: 16px;
+  background: #fafafa;
+}
+
+.canvasRow {
+  position: relative;
+}
+
+.blockWrap {
+  cursor: grab;
+}
+
+.blockWrap.isDragging {
+  opacity: 0.45;
+}
+
+.blockBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.dropLine {
+  height: 2px;
+  margin: 2px 0;
+  border-radius: 2px;
+  background: var(--ant-color-primary, #1677ff);
+  box-shadow: 0 0 0 3px var(--ant-color-primary-border, #91caff);
+}
+
+/* ---------- 底栏 / 启动态 ---------- */
+
+.appFooter {
+  display: flex;
+  gap: 18px;
+  padding: 8px 20px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+.footerHint {
+  margin-left: auto;
+}
+
+.boot {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+/* ---------- 其他组件 ---------- */
+
+.blockWrap.isSelected .ant-card {
+  border-color: var(--ant-color-primary, #1677ff);
+  box-shadow: 0 0 0 3px var(--ant-color-primary-border, #91caff);
+}
+
+.imageEmpty {
+  display: grid;
+  place-items: center;
+  min-height: 140px;
+  padding: 16px;
+  border: 1.5px dashed #d9d9d9;
+  border-radius: 10px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 420px;
+}
+
+.requiredMark {
+  margin-left: 2px;
+  color: #ff4d4f;
+}
+
+.drawerFile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background: #fafafa;
+}
